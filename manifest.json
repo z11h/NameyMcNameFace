@@ -1,0 +1,20 @@
+{
+
+  "name": "NameyMcNameFace",
+  "short_name": "NMNF",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "description": "A plain text description",
+  "icons": {},
+  "background": {
+    "persistent": true
+  },
+  "background_page": "background.html",
+  "homepage_url": "",
+
+  "offline_enabled": false,
+
+  "options_page": "options.html",
+
+}
