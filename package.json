@@ -1,6 +1,15 @@
 {
   "name": "NameyMcNameFace",
   "description": "generate account info quick and easy!",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "chance": "^1.0.3",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-replace": "^0.5.4",
+    "jshint": "^2.9.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {}
 }
