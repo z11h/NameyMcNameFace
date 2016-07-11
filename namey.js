@@ -37,7 +37,7 @@ function setBirthMonth() { // generate a random parsed, trimed int for the month
 }
 
 function setBirthDay() { // generate a random unparsed day
-  document.getElementById('BirthDay').value = chance.date().day();
+  document.getElementById('BirthDay').value = chance.date().getDate();
 }
 
 function setBirthYear() { // generate a random unparsed year
