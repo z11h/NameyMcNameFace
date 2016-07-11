@@ -6,7 +6,9 @@
 * Latest version number: 0.0.1
 */
 
-const PASS_POOL = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^'
+"use strict";
+
+const PASS_POOL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
 
 function setFName() {
   document.getElementById('FirstName').value = chance.first();
@@ -29,11 +31,11 @@ function setGender() { // takes 'm' for male, 'f' for female, and 'u' for not sp
 }
 
 function setEmailOptin() { // so accounts' Outlook email is only BR offers, no junk
-  document.getElementById('iOptinEmail').checked = false
+  document.getElementById('iOptinEmail').checked = false;
 }
 
 function setBirthMonth() { // generate a random parsed, trimed int for the month
-  document.getElementById('BirthMonth').value = parseInt(chance.month({raw: true}).numeric.trim()) // todo: only get numeric, not whole object
+  document.getElementById('BirthMonth').value = parseInt(chance.month({raw: true}).numeric.trim()); // todo: only get numeric, not whole object
 }
 
 function setBirthDay() { // generate a random unparsed day
@@ -41,28 +43,28 @@ function setBirthDay() { // generate a random unparsed day
 }
 
 function setBirthYear() { // generate a random unparsed year
-  document.getElementById('BirthYear').value = chance.year({min: 1955, max: 1998})
+  document.getElementById('BirthYear').value = chance.year({min: 1955, max: 1998});
 }
 
 function setPhoneCountry() {
-  document.getElementById('PhoneCountry').value = "US" // make sure its set to US
+  document.getElementById('PhoneCountry').value = "US"; // make sure its set to US
 }
 
 function setPhoneNumber() {
-  document.getElementById('PhoneNumber').value = chance.phone({ formatted: false, country: "us", mobile: true })
+  document.getElementById('PhoneNumber').value = chance.phone({ formatted: false, country: "us", mobile: true });
 }
 
 function nameyMcNameFace() { // not best function name
-  setFName()
-  setLName()
-  setPass()
-  setCountry()
-  setGender()
-  setEmailOptin()
-  setBirthMonth()
-  setBirthDay()
-  setBirthYear()
-  setPhoneCountry()
-  setPhoneNumber()
+  setFName();
+  setLName();
+  setPass();
+  setCountry();
+  setGender();
+  setEmailOptin();
+  setBirthMonth();
+  setBirthDay();
+  setBirthYear();
+  setPhoneCountry();
+  setPhoneNumber();
 }
 // lol
