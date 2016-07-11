@@ -1,3 +1,11 @@
+/*
+* Sorce Code for NameyMcNameFace
+* Written by Zakaria Ridouh
+* Started Developement: 7/10/16
+* Latest change date: 7/10/16
+* Latest version number: 0.0.1
+*/
+
 const PASS_POOL = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^'
 
 function setFName() {

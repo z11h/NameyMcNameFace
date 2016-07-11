@@ -1,5 +1,6 @@
 {
   "name": "NameyMcNameFace",
+  "version": "0.0.1",
   "description": "generate account info quick and easy!",
   "dependencies": {
     "browserify": "^13.0.1",
