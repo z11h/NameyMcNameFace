@@ -43,3 +43,18 @@ function setPhoneCountry() {
 function setPhoneNumber() {
   document.getElementById('PhoneNumber').value = chance.phone({ formatted: false, country: "us", mobile: true })
 }
+
+function nameyMcNameFace() { // not best function name
+  setFName()
+  setLName()
+  setPass()
+  setCountry()
+  setGender()
+  setEmailOptin()
+  setBirthMonth()
+  setBirthDay()
+  setBirthYear()
+  setPhoneCountry()
+  setPhoneNumber()
+}
+// lol
