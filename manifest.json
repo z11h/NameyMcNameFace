@@ -6,17 +6,10 @@
   "manifest_version": 2,
   "description": "An extension to generate account info quick and easy!",
   "page_action": {
-    /*"default_icon": {
-      "19": "images/icon19.png",
-      "38": "images/icon38.png"
-    },*/
     "default_title": "NameyMcNameFace",
     "default_popup": "popup.html"
   },
-  /*"icons": {
-    "19": "images/icon19.png",
-    "38": "images/icon38.png"
-  },*/
+
   "background": {
     "persistent": true,
     "page": "background.html"
