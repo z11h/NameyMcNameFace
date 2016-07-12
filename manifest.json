@@ -4,25 +4,24 @@
   "short_name": "NMNF",
   "version": "0.0.1",
   "manifest_version": 2,
-  "default_locale": "en",
   "description": "A plain text description",
   "page_action": {
-    "default_icon": {
+    /*"default_icon": {
       "19": "images/icon19.png",
       "38": "images/icon38.png"
-    },
+    },*/
     "default_title": "NameyMcNameFace",
     "default_popup": "popup.html"
   },
-  "icons": {
+  /*"icons": {
     "19": "images/icon19.png",
     "38": "images/icon38.png"
-  },
+  },*/
   "background": {
-    "persistent": true
+    "persistent": true,
+    "page": "background.html"
   },
-  "background_page": "background.html",
-  "homepage_url": "",
+  "homepage_url": "https://github.com/ZakariaRidouh/NameyMcNameFace",
   "content_scripts": [{
     "matches": ["*://*.bing.com/*", "*://*.microsoft.com/*", "*://*.live.com/*", "*://*.signup.live.com/*"],
     "js": ["chance.min.js", "namey.js"]
