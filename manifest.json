@@ -7,20 +7,23 @@
   "default_locale": "en",
   "description": "A plain text description",
   "page_action": {
-          "default_icon": {
-            "19": "images/icon19.png",
-            "38": "images/icon38.png"
-          },
-          "default_title": "NameyMcNameFace",
-          "default_popup": "popup.html"
-        },
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "NameyMcNameFace",
+    "default_popup": "popup.html"
+  },
   "icons": {},
   "background": {
     "persistent": true
   },
   "background_page": "background.html",
   "homepage_url": "",
-
+  "content_scripts": [{
+    "matches": ["*://*.bing.com/*", "*://*.microsoft.com/*", "*://*.live.com/*", "*://*.signup.live.com/*"],
+    "js": ["chance.min.js", "namey.js"]
+  }],
   "offline_enabled": false,
 
   "options_page": "options.html",
