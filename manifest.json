@@ -14,7 +14,10 @@
     "default_title": "NameyMcNameFace",
     "default_popup": "popup.html"
   },
-  "icons": {},
+  "icons": {
+    "19": "images/icon19.png",
+    "38": "images/icon38.png"
+  },
   "background": {
     "persistent": true
   },
@@ -26,6 +29,6 @@
   }],
   "offline_enabled": false,
 
-  "options_page": "options.html",
+  "options_page": "options.html"
 
 }
