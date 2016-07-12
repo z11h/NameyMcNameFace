@@ -1,5 +1,5 @@
 # NameyMcNameFace
-:money_with_wings: generate account info quick and easy
+:money_with_wings: An extension to generate account info quick and easy
 
 This project is heavily reliant on [Chance](chancejs.com).
 
