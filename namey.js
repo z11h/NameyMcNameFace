@@ -33,17 +33,9 @@ function setCountry() { // The MS sign up page takes area codes, we only want th
 }
 
 function setGender() { // takes 'm' for male, 'f' for female, and 'u' for not specified
-  switch (chance.gender()) {
-    case 'Male':
-      gender = 'm';
-      break;
-    case 'Female':
-      gender = 'f';
-      break;
-    default: // todo: actually give this a chance to be
-      gender = 'u';
-  }
-  document.getElementById('Gender').value = gender;
+  const GENDER_POOL = ["m", "f", "u"];
+
+  document.getElementById('Gender').value = chance.pickone(GENDER_POOL);
 }
 
 function setEmailOptin() { // so accounts' Outlook email is only BR offers, no junk
