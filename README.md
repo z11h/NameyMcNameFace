@@ -10,7 +10,7 @@ Coming soon
 ## Todo:
 
 - [ ] Export accounts feature
-- [ ] Make all fields related to each other, if account is female, generate female name etc...
+- [x] Make all fields related to each other, if account is female, generate female name etc...
 
 ## Currently Fully Supported Platforms
 

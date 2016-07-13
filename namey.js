@@ -2,20 +2,44 @@
  * Sorce Code for NameyMcNameFace
  * Written by Zakaria Ridouh
  * Started Developement: 7/10/16
- * Latest change date: 7/10/16
- * Latest version number: 0.0.1
+ * Latest change date: 7/12/16
+ * Latest version number: 0.0.2
  */
 
 "use strict";
 
 const PASS_POOL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
+const GENDER_POOL = ["m", "f", "u"];
+
+let singleGender;
+let fullGender;
+
+function generateGender() {
+  singleGender = chance.pickone(GENDER_POOL);
+
+  switch (singleGender) {
+    case 'm':
+      fullGender = "male";
+      break;
+    case 'f':
+      fullGender = "female";
+      break;
+    default: // pick a random gender
+      fullGender = chance.pickone(["male", "female"]);
+      break;
+  }
+}
 
 function setFName() {
-  document.getElementById('FirstName').value = chance.first();
+  document.getElementById('FirstName').value = chance.first({
+    gender: fullGender
+  });
 }
 
 function setLName() {
-  document.getElementById('LastName').value = chance.last();
+  document.getElementById('LastName').value = chance.last({
+      gender: fullGender
+  });
 }
 
 function setPass() { // generates and sets password as well as password verification
@@ -33,9 +57,7 @@ function setCountry() { // The MS sign up page takes area codes, we only want th
 }
 
 function setGender() { // takes 'm' for male, 'f' for female, and 'u' for not specified
-  const GENDER_POOL = ["m", "f", "u"];
-
-  document.getElementById('Gender').value = chance.pickone(GENDER_POOL);
+  document.getElementById('Gender').value = singleGender;
 }
 
 function setEmailOptin() { // so accounts' Outlook email is only BR offers, no junk
@@ -54,7 +76,7 @@ function setBirthDay() { // generate a random unparsed day
 
 function setBirthYear() { // generate a random unparsed year
   document.getElementById('BirthYear').value = chance.year({
-    min: 1955,
+    min: 1945,
     max: 1998
   });
 }
@@ -66,12 +88,12 @@ function setPhoneCountry() {
 function setPhoneNumber() {
   document.getElementById('PhoneNumber').value = chance.phone({
     formatted: false,
-    country: "us",
-    mobile: true
+    country: "us"
   });
 }
 
 function nameyMcNameFace() { // not best function name
+  generateGender()
   setFName();
   setLName();
   setPass();
