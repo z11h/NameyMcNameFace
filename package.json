@@ -1,6 +1,6 @@
 {
   "name": "NameyMcNameFace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An extension to generate account info quick and easy!",
   "dependencies": {
     "browserify": "^13.0.1",

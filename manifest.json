@@ -2,7 +2,7 @@
 
   "name": "NameyMcNameFace",
   "short_name": "NMNF",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "An extension to generate account info quick and easy!",
   "page_action": {

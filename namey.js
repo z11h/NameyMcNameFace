@@ -26,7 +26,6 @@ function generateGender() {
       break;
     default: // pick a random gender
       fullGender = chance.pickone(["male", "female"]);
-      break;
   }
 }
 
@@ -107,4 +106,3 @@ function nameyMcNameFace() { // not best function name
   setPhoneNumber();
 }
 // lol
-
