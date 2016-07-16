@@ -8,6 +8,8 @@
 
 "use strict";
 
+const chance = new Chance();
+
 const PASS_POOL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
 const GENDER_POOL = ["m", "f", "u"];
 
@@ -37,7 +39,7 @@ function setFName() {
 
 function setLName() {
   document.getElementById('LastName').value = chance.last({
-      gender: fullGender
+    gender: fullGender
   });
 }
 

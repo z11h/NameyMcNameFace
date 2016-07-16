@@ -1,3 +1,5 @@
+"use strict";
+
 chrome.tabs.onUpdated.addListener((tabId, ignore, tab) => {
     if (tab.url.includes("signup.live.com/newuser.aspx")) {
         chrome.pageAction.show(tabId);
