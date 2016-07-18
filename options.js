@@ -2,11 +2,10 @@
 
 let status = document.getElementById('status');
 
-function updateStatus(message) { //updates the status with a provided string.
-  status.innerHTML = message;
+function updateStatus(message) {
   swal(
-    'Yay!',
-    'Successfully saved settings!',
+    'Woot!',
+    message,
     'success'
   )
 }
