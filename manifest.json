@@ -17,6 +17,7 @@
   "permissions": ["tabs", "*://signup.live.com/*"],
   "offline_enabled": false,
 
-  "options_page": "options.html"
+  "options_page": "options.html",
+  "chrome_style": true,
 
 }
