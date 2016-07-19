@@ -3,11 +3,7 @@
 let status = document.getElementById('status');
 
 function updateStatus(message) {
-  swal(
-    'Woot!',
-    message,
-    'success'
-  )
+  status.innerHTML = message
 }
 
 function saveSettings() {
