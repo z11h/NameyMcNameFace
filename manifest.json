@@ -5,8 +5,10 @@
   "version": "0.0.2",
   "manifest_version": 2,
   "description": "An extension to generate account info quick and easy!",
-  "page_action": {
-    "default_title": "NameyMcNameFace"
+
+  "browser_action": {
+    "default_title": "NameyMcNameFace!",
+    "default_popup": "popup.html"
   },
 
   "background": {
@@ -14,7 +16,7 @@
     "page": "background.html"
   },
   "homepage_url": "https://github.com/ZakariaRidouh/NameyMcNameFace",
-  "permissions": ["tabs", "*://signup.live.com/*"],
+  "permissions": ["tabs", "storage", "*://signup.live.com/*"],
   "offline_enabled": false,
 
   "options_ui": {

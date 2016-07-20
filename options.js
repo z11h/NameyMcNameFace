@@ -1,15 +1,15 @@
 "use strict";
 
-let status = document.getElementById('status');
+const optionsStatus = document.getElementById('optionsStatus');
+const saveButton = document.getElementById('saveButton');
 
 function updateStatus(message) {
-  status.innerHTML = message
-}
+  optionStatus.innerHTML = message;
+};
 
 function saveSettings() {
-  // save the options to local storage
   updateStatus("Successfully saved settings!");
 };
 
 // attach event listeners
-document.getElementById('saveButton').addEventListener("click", saveSettings);
+saveButton.addEventListener("click", saveSettings);
