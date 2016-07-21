@@ -4,11 +4,27 @@ const optionsStatus = document.getElementById('optionsStatus');
 const saveButton = document.getElementById('saveButton');
 
 function updateStatus(message) {
-  optionStatus.innerHTML = message;
+  optionsStatus.innerHTML = "<br />" + message;
+};
+
+function clearStatus() {
+  optionsStatus.innerHTML = '';
 };
 
 function saveSettings() {
-  updateStatus("Successfully saved settings!");
+  let nameNationality = document.getElementById('nationalityOption').value;
+  let passPool = document.getElementById('passPoolInput').value;
+
+  chrome.storage.sync.set({
+    'nationality': nameNationality,
+    'passPool': passPool
+  }, () => {
+    updateStatus("Successfully saved settings!");
+  })
+
+  setTimeout(() => {
+    clearStatus()
+  }, 5000)
 };
 
 // attach event listeners

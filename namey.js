@@ -2,15 +2,15 @@
  * Sorce Code for NameyMcNameFace
  * Written by Zakaria Ridouh
  * Started Developement: 7/10/16
- * Latest change date: 7/12/16
- * Latest version number: 0.0.2
+ * Latest change date: 7/10/16
+ * Latest version number: 0.0.3
  */
 
 "use strict";
 
 const chance = new Chance();
 
-const PASS_POOL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
+const PASS_POOL = chrome.storage.sync.get(passPool) || "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
 const GENDER_POOL = ["m", "f", "u"];
 
 let singleGender;
@@ -33,13 +33,19 @@ function generateGender() {
 
 function setFName() {
   document.getElementById('FirstName').value = chance.first({
-    gender: fullGender
+    gender: fullGender,
+    nationality: chrome.storage.sync.get(nationality, () => {
+      console.log("Pulled data from storage:" + nameNationality)
+    })
   });
 }
 
 function setLName() {
   document.getElementById('LastName').value = chance.last({
-    gender: fullGender
+    gender: fullGender,
+    nationality: chrome.storage.sync.get(nationality, () => {
+      console.log("Pulled data from storage:" + nameNationality)
+    })
   });
 }
 

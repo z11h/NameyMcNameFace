@@ -9,6 +9,11 @@
       background-color: #fff;
       background-image: url(optionsBack.png);
     }
+
+    /*#nationality {
+      border: 0.1px solid black;
+      border-radius: 10px;
+    }*/
   </style>
 </head>
 
@@ -17,9 +22,26 @@
     <div id="heading">
       <h1>NameyMcNameFace</h1>
       <h2>Options Page</h2>
+      <h4>These settings WILL sync with your Google Account</h4>
     </div>
-    <br />
+    <hr width=35%/>
     <div id="options">
+      <div id="nationality">
+        <h4>Set Nationality</h4>
+        <h5>Nationality to be used when generating names and other info.</h5>
+        <h6>NOTE: only US and Italy are currently supported</h6>
+        <select id="nationalityOption">
+          <option value="us" id="usnationality">United States</option>
+          <option value="it" id="itnationality">Italy</option>
+        </select>
+      </div>
+      <hr width=35%/>
+      <div id="passPool">
+        <h4>Set Passpool</h4>
+        <h5>The set of characters and symbols used to generate the password.</h5>
+        <input type="text" id="passPoolInput"/>
+      </div>
+
       <br />
       <button type="button" id="saveButton">Save</button>
       <br />
@@ -27,7 +49,7 @@
     </div>
     <br />
     <span id="version">
-      Version: 0.0.2
+      Version: 0.0.3
     </span>
   </center>
   <script src="options.js"></script>
