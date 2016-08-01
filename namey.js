@@ -50,7 +50,7 @@ function setLName() {
 }
 
 function setPass() { // generates and sets password as well as password verification
-  chrome.storage.sync.get({passPool: DEFAULT_PASS_POOL}. items => {
+  chrome.storage.sync.get({passPool: DEFAULT_PASS_POOL}, items => {
       document.getElementById('Password').value = chance.string({
         length: chance.integer({
           min: 8,
