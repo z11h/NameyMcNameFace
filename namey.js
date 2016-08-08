@@ -10,7 +10,7 @@
 
 const chance = new Chance();
 
-const PASS_POOL = chrome.storage.sync.get(passPool) || "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
+const DEFAULT_PASS_POOL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_!@#$*&^";
 const GENDER_POOL = ["m", "f", "u"];
 
 let singleGender;
@@ -50,12 +50,14 @@ function setLName() {
 }
 
 function setPass() { // generates and sets password as well as password verification
-  document.getElementById('Password').value = chance.string({
-    length: chance.integer({
-      min: 8,
-      max: 15
-    }),
-    pool: PASS_POOL
+  chrome.storage.sync.get({passPool: DEFAULT_PASS_POOL}, items => {
+      document.getElementById('Password').value = chance.string({
+        length: chance.integer({
+          min: 8,
+          max: 15
+        }),
+        pool: items.passPool
+      });
   });
 }
 
