@@ -19,7 +19,7 @@ function saveSettings() {
     'nationality': nameNationality,
     'passPool': passPool
   }, () => {
-    updateStatus()("Successfully saved settings!");
+    updateStatus("Successfully saved settings!");
   })
 
   setTimeout(() => {
