@@ -1,12 +1,21 @@
 "use strict";
 
-const popupStatus = document.getElementById('popupStatus');
 const startNameyButton = document.getElementById('startNameyButton');
 const resetNameyButton = document.getElementById('resetNameyButton');
 
-function updateStatus(message) {
-  popupStatus.innerHTML = message;
-};
+const updateStatus = (() => {
+    const popupStatus = document.getElementById('popupStatus');
+    let statusClearTimeout;
+
+    return (message) => {
+        popupStatus.innerHTML = message;
+
+        clearTimeout(statusClearTimeout);
+        statusClearTimeout = setTimeout(() => {
+            popupStatus.innerHTML = "";
+        }, 2000);
+    };
+})();
 
 function startNamey() {
   nameyMcNameFace();
