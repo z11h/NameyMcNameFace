@@ -1,5 +1,6 @@
 <h1 align="center">NameyMcNameFace</h1>
-<h5 align="center">:money_with_wings: An extension to generate account info quick and easy.</h5>
+<h5 align="center">:money_with_wings: An extension to generate Microsoft accounts quick and easy for Bing Rewards.</h5>
+<h5 align="center">No longer in development as Microsoft has changed their Bing Rewards system.</h5>
 
 <div align="center">
   <a href="https://github.com/ZakariaRidouh/NameyMcNameFace/pull">
