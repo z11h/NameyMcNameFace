@@ -17,10 +17,16 @@
 
 Coming soon
 
+## Features
+
+- Syncs options with google account logged in
+- Options.html to edit settings, pool of characters program will use to make username and passwords. Different nationality names.
+- Quickly generates a bunch of names and passwords, fills them into the correct fields and hits next. Allows you to export into text file (coming soon)
+
 ## Todo:
 
 - [ ] Export accounts feature
-- [x] Make all fields related to each other, if account is female, generate female name etc...
+- [x] DONE. Make all fields related to each other, if account is female, generate female name etc...
 
 ## Known Issues
 * None Currently
