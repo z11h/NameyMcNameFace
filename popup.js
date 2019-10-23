@@ -1,5 +1,3 @@
-"use strict";
-
 const startNameyButton = document.getElementById('startNameyButton');
 const resetNameyButton = document.getElementById('resetNameyButton');
 
